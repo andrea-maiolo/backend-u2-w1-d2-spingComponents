@@ -6,13 +6,16 @@ import com.epicode.U5D1.entities.Table;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
+@PropertySource("application.properties")
 public class MyRunner implements CommandLineRunner {
 
     @Autowired
     private Menu menu;
+
 
     @Value("${coperto.value}")
     private double coperto;
